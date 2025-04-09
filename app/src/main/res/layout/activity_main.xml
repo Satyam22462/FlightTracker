@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0BFFFB"
+    android:padding="24dp"
+    tools:context=".MainActivity">
+
+    <!-- 🗂️ History Icon Button -->
+
+    <!-- Header -->
+
+    <ImageButton
+        android:id="@+id/historyButton"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="0dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="@string/view_history"
+        android:src="@android:drawable/ic_menu_agenda"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="#000000" />
+
+    <TextView
+        android:id="@+id/titleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/flight_tracker"
+        android:textColor="#222222"
+        android:textSize="56sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp"/>
+
+    <!-- Flight Spinner -->
+    <TextView
+        android:id="@+id/titleText2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/choose_your_flight"
+        android:textColor="#222222"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/titleText"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="30dp" />
+
+    <Spinner
+        android:id="@+id/flightSpinner"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:popupBackground="#000000"
+        app:layout_constraintTop_toBottomOf="@id/titleText2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Flight Number Input -->
+    <TextView
+        android:id="@+id/titleText3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/enter_flight_number"
+        android:textColor="#222222"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/flightSpinner"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="20dp"/>
+
+    <EditText
+        android:id="@+id/flightInput"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/enter_flight_number_e_g_ek215"
+        android:inputType="textCapCharacters"
+        android:autofillHints="username"
+        android:importantForAutofill="yes"
+        android:textSize="18sp"
+        android:minHeight="48dp"
+        android:padding="14dp"
+        android:backgroundTint="#000000"
+        android:textColor="#000000"
+        android:textColorHint="#555555"
+        app:layout_constraintTop_toBottomOf="@id/titleText3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Mode Switch -->
+    <Switch
+        android:id="@+id/modeSwitch"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/use_live_api_off_google_web"
+        android:textColor="#000000"
+        android:minHeight="48dp"
+        app:thumbTint="@android:color/black"
+        app:trackTint="@android:color/black"
+        app:layout_constraintTop_toBottomOf="@id/flightInput"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp"/>
+
+    <!-- Track Flight Button -->
+    <Button
+        android:id="@+id/showWeb"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/track_flight"
+        android:backgroundTint="#000000"
+        android:textColor="#FFFFFF"
+        android:minHeight="48dp"
+        android:padding="14dp"
+        app:layout_constraintTop_toBottomOf="@id/modeSwitch"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="24dp"/>
+
+    <!-- From/To Inputs Horizontal -->
+    <LinearLayout
+        android:id="@+id/fromToLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="24dp"
+        android:weightSum="2"
+        app:layout_constraintTop_toBottomOf="@id/showWeb"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <EditText
+            android:id="@+id/fromInput"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="@string/from_airport_hint"
+            android:inputType="textCapCharacters"
+            android:autofillHints="username"
+            android:importantForAutofill="yes"
+            android:textSize="16sp"
+            android:minHeight="48dp"
+            android:padding="12dp"
+            android:backgroundTint="#000000"
+            android:textColor="#000000"
+            android:textColorHint="#555555"
+            android:layout_marginEnd="8dp"/>
+
+        <EditText
+            android:id="@+id/toInput"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="@string/to_airport_hint"
+            android:inputType="textCapCharacters"
+            android:autofillHints="username"
+            android:importantForAutofill="yes"
+            android:textSize="16sp"
+            android:minHeight="48dp"
+            android:padding="12dp"
+            android:backgroundTint="#000000"
+            android:textColor="#000000"
+            android:textColorHint="#555555"
+            android:layout_marginStart="8dp"/>
+    </LinearLayout>
+
+    <!-- Track by Route Button -->
+    <Button
+        android:id="@+id/showByRoute"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/track_by_route"
+        android:backgroundTint="#000000"
+        android:textColor="#FFFFFF"
+        android:minHeight="48dp"
+        android:padding="14dp"
+        app:layout_constraintTop_toBottomOf="@id/fromToLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

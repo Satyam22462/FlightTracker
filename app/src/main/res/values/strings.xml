@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">FlightTracker2.0</string>
+    <string name="choose_your_flight">Choose Your Flight</string>
+    <string name="flight_tracker">FLIGHT TRACKER ✈</string>
+    <string name="enter_flight_number_e_g_ek215">Enter Flight Number (e.g. EK215)</string>
+    <string name="use_live_api_off_google_web">Use Live API (off = Google Web)</string>
+    <string name="track_flight">Track Flight</string>
+    <string name="chooose_your_flight">Chooose your Flight</string>
+    <string name="enter_flight_number">Enter Flight Number</string>
+    <string name="show_flight_stats">Show Flight Stats</string>
+    <string name="track_by_route">Track by Route</string>
+    <string name="from_airport_hint">From (e.g. JFK)</string>
+    <string name="to_airport_hint">To (e.g. LAX)</string>
+    <string name="enter_valid_flight_warning">Please enter a valid flight number</string>
+    <string name="enter_both_airports_warning">Enter both From and To airport codes</string>
+    <string name="loading_route_status">Loading route status...</string>
+    <string name="view_history">view_history</string>
+
+</resources>
