@@ -32,7 +32,7 @@ An Android application that allows users to **track flights live** and **analyze
 |-------------|--------------------------------------|
 | UI          | XML layouts, ConstraintLayout, RecyclerView |
 | Logic       | Kotlin, Coroutines, Lifecycle-aware components |
-| API         | AviationStack (REST), Retrofit + Gson |
+| API         | AviationStack (REST API), Retrofit + Gson |
 | Storage     | Room Database                        |
 | Background  | WorkManager (PeriodicWorker)         |
 | Navigation  | Intent-based                         |
